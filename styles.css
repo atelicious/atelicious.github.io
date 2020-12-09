@@ -142,7 +142,7 @@ section .button {
   cursor: pointer;
 }
 
-.btn:active {
+.btn2:active {
   box-shadow: 0 0 0 #8a7400;
   transform: translate(2px, 2px);
 }
