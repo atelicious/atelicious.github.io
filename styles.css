@@ -138,6 +138,7 @@ section .button {
   background-color: seagreen;
   color: #FFF;
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .bg-social {
