@@ -121,6 +121,25 @@ section .button {
   transform: translate(2px, 2px);
 }
 
+.btn2 {
+  margin-right: 10px;
+  background-color: #c7eae4;
+  color: #000;
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #8a7400;
+  padding: 5px 5px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn2:hover {
+  background-color: seagreen;
+  color: #FFF;
+  transform: scale(1.05);
+}
+
 .bg-social {
   background-color: #788d85;
   color: #fff;
