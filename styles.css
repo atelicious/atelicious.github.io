@@ -132,6 +132,7 @@ section .button {
   padding: 5px 5px;
   text-decoration: none;
   transition: transform 0.3s ease;
+  outline: none;
 }
 
 .btn2:hover {
@@ -139,6 +140,11 @@ section .button {
   color: #FFF;
   transform: scale(1.05);
   cursor: pointer;
+}
+
+.btn:active {
+  box-shadow: 0 0 0 #8a7400;
+  transform: translate(2px, 2px);
 }
 
 .bg-social {
