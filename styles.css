@@ -1,6 +1,6 @@
 /* ==========================================================================
    Recruiter-Optimized Design Tokens & Layout
-   High signal-to-noise ratio, warm light palette, scannable typography
+   Compact, High Information Density, Zero-Fluff, Responsive Across All Screens
    ========================================================================== */
 :root {
   /* Warm Paper & Clean Minimalist Palette */
@@ -22,7 +22,7 @@
   --tag-color: #292524;
   --tag-border: #E2DAD0;
   
-  --nav-bg: rgba(251, 249, 245, 0.94);
+  --nav-bg: rgba(251, 249, 245, 0.96);
   --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.04);
   --shadow-md: 0 4px 8px rgba(28, 25, 23, 0.04);
   
@@ -50,7 +50,7 @@
   --tag-color: #E2DBD2;
   --tag-border: #3D3831;
   
-  --nav-bg: rgba(24, 23, 22, 0.94);
+  --nav-bg: rgba(24, 23, 22, 0.96);
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
@@ -66,17 +66,19 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 4.5rem;
+  scroll-padding-top: 4.25rem;
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-sans);
-  line-height: 1.55;
-  font-size: 0.975rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
   transition: background-color 0.2s ease, color 0.2s ease;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .mono {
@@ -86,6 +88,7 @@ body {
 a {
   color: var(--accent);
   text-decoration: none;
+  transition: color 0.15s ease;
 }
 
 a:hover {
@@ -96,21 +99,21 @@ a:hover {
   width: 100%;
   max-width: 860px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
 }
 
 /* ==========================================================================
-   Sticky Header
+   Sticky Header & Navigation
    ========================================================================== */
 .header-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 3.75rem;
+  height: 3.5rem;
   background-color: var(--nav-bg);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-subtle);
   z-index: 1000;
   display: flex;
@@ -122,6 +125,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  gap: 1rem;
 }
 
 .nav-brand {
@@ -129,19 +133,22 @@ a:hover {
   font-size: 1.15rem;
   font-weight: 600;
   color: var(--text-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .nav-menu a {
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 500;
   transition: color 0.15s ease;
+  white-space: nowrap;
 }
 
 .nav-menu a:hover,
@@ -152,20 +159,23 @@ a:hover {
 .nav-controls {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.5rem;
+  flex-shrink: 0;
 }
 
 .theme-btn {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
-  width: 2.1rem;
-  height: 2.1rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 5px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  flex-shrink: 0;
 }
 
 .theme-btn:hover {
@@ -176,14 +186,15 @@ a:hover {
 .nav-contact-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  font-size: 0.825rem;
+  justify-content: center;
+  font-size: 0.8rem;
   font-weight: 600;
-  padding: 0.4rem 0.85rem;
+  padding: 0.35rem 0.75rem;
   border-radius: 5px;
   background-color: var(--text-primary);
   color: var(--bg-primary) !important;
   transition: background-color 0.15s ease;
+  white-space: nowrap;
 }
 
 .nav-contact-btn:hover {
@@ -191,16 +202,36 @@ a:hover {
   color: #FFFFFF !important;
 }
 
-/* ==========================================================================
+.mobile-toggle {
+  display: none;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.mobile-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ==========================================
    Hero: Scannable 10-Second Candidate Overview
-   ========================================================================== */
+   ========================================== */
 .hero {
-  padding: 5.5rem 0 2rem;
+  padding: 4.75rem 0 1rem;
 }
 
 .candidate-header {
   border-bottom: 1px solid var(--border-subtle);
-  padding-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
 }
 
 .candidate-title-row {
@@ -208,12 +239,12 @@ a:hover {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .candidate-name {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
   font-weight: 600;
   line-height: 1.15;
   color: var(--text-primary);
@@ -221,10 +252,10 @@ a:hover {
 }
 
 .candidate-role {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--accent);
-  margin-top: 0.25rem;
+  margin-top: 0.15rem;
 }
 
 .candidate-badge {
@@ -236,8 +267,9 @@ a:hover {
   background-color: var(--bg-subtle);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
-  padding: 0.3rem 0.65rem;
+  padding: 0.25rem 0.55rem;
   border-radius: 4px;
+  white-space: nowrap;
 }
 
 .status-dot {
@@ -245,13 +277,14 @@ a:hover {
   height: 6px;
   border-radius: 50%;
   background-color: #16A34A;
+  flex-shrink: 0;
 }
 
 .candidate-pitch {
-  font-size: 1.05rem;
+  font-size: 0.985rem;
   color: var(--text-secondary);
-  line-height: 1.6;
-  margin-top: 1rem;
+  line-height: 1.55;
+  margin-top: 0.65rem;
   max-width: 760px;
 }
 
@@ -259,26 +292,28 @@ a:hover {
   color: var(--text-primary);
 }
 
-/* Top Action & Contact Bar */
+/* Action & Contact Bar */
 .candidate-contact-bar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
-  margin-top: 1.25rem;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
 }
 
 .btn-contact {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
-  font-size: 0.85rem;
+  font-size: 0.825rem;
   font-weight: 600;
-  padding: 0.45rem 0.95rem;
+  padding: 0.4rem 0.85rem;
   border-radius: 5px;
   cursor: pointer;
   border: 1px solid transparent;
   transition: all 0.15s ease;
+  white-space: nowrap;
 }
 
 .btn-contact.primary {
@@ -302,12 +337,13 @@ a:hover {
 }
 
 .link-muted {
-  font-size: 0.875rem;
+  font-size: 0.825rem;
   font-weight: 500;
   color: var(--text-secondary);
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
+  white-space: nowrap;
 }
 
 .link-muted:hover {
@@ -317,48 +353,50 @@ a:hover {
 /* Quick Metrics Row */
 .quick-stats-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 0.75rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .quick-stat-box {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  padding: 0.85rem 1rem;
+  border-radius: 5px;
+  padding: 0.55rem 0.75rem;
 }
 
 .stat-num {
   font-family: var(--font-mono);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--accent);
   line-height: 1.2;
+  word-break: break-word;
 }
 
 .stat-desc {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--text-secondary);
   font-weight: 500;
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
+  line-height: 1.35;
 }
 
 /* ==========================================
-   Section Headers (Clean & Compact)
+   Section Headers (Tight & Clean)
    ========================================== */
 .section {
-  padding: 2.75rem 0 1rem;
+  padding: 1.65rem 0 0.5rem;
 }
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 600;
   color: var(--text-primary);
-  border-bottom: 2px solid var(--border-subtle);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
+  border-bottom: 1.5px solid var(--border-subtle);
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.85rem;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -366,7 +404,7 @@ a:hover {
 
 .section-title .section-hint {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   color: var(--text-muted);
   font-weight: 400;
   text-transform: uppercase;
@@ -374,35 +412,35 @@ a:hover {
 }
 
 /* ==========================================
-   Skills Matrix: Instant Visual Parsing
+   Skills Matrix: Compact Visual Grid
    ========================================== */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
+  gap: 0.65rem;
 }
 
 .skill-box {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  padding: 1rem 1.15rem;
+  border-radius: 5px;
+  padding: 0.7rem 0.9rem;
 }
 
 .skill-category {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   font-weight: 600;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.25rem;
 }
 
 .skill-items {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--text-primary);
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 .skill-items strong {
@@ -410,19 +448,19 @@ a:hover {
 }
 
 /* ==========================================
-   Work Experience: High Impact with Progressive Disclosure
+   Work Experience: High Impact & Collapsible
    ========================================== */
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 0.85rem;
 }
 
 .job-card {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: 6px;
-  padding: 1.35rem 1.5rem;
+  padding: 1rem 1.15rem;
   box-shadow: var(--shadow-sm);
 }
 
@@ -431,45 +469,47 @@ a:hover {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0.85rem;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
 }
 
 .job-role {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-primary);
+  line-height: 1.3;
 }
 
 .job-company {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--accent);
 }
 
 .job-dates {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
   background-color: var(--bg-subtle);
-  padding: 0.2rem 0.55rem;
+  padding: 0.15rem 0.45rem;
   border-radius: 4px;
+  white-space: nowrap;
 }
 
 .job-bullets {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
-  margin-bottom: 0.75rem;
+  gap: 0.4rem;
+  margin-bottom: 0.45rem;
 }
 
 .job-bullets li {
   position: relative;
-  padding-left: 1.25rem;
+  padding-left: 1.15rem;
   color: var(--text-secondary);
-  font-size: 0.925rem;
-  line-height: 1.55;
+  font-size: 0.885rem;
+  line-height: 1.5;
 }
 
 .job-bullets li::before {
@@ -477,7 +517,7 @@ a:hover {
   position: absolute;
   left: 0;
   color: var(--accent);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .job-bullets li strong {
@@ -487,21 +527,21 @@ a:hover {
 
 /* Collapsible Progressive Disclosure */
 .job-details {
-  margin-top: 0.5rem;
-  margin-bottom: 0.85rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
 }
 
 .job-details-toggle {
   cursor: pointer;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.775rem;
   color: var(--accent);
   font-weight: 500;
   user-select: none;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.2rem 0;
+  padding: 0.15rem 0;
   list-style: none;
 }
 
@@ -520,24 +560,24 @@ a:hover {
 .toggle-icon {
   display: inline-block;
   transition: transform 0.15s ease;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 .job-expanded-content {
-  margin-top: 0.65rem;
-  padding-left: 0.85rem;
+  margin-top: 0.45rem;
+  padding-left: 0.75rem;
   border-left: 2px solid var(--border-subtle);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
 }
 
 .job-expanded-content li {
   position: relative;
-  padding-left: 1rem;
+  padding-left: 0.85rem;
   color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.85rem;
+  line-height: 1.45;
   list-style: none;
 }
 
@@ -552,52 +592,54 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.4rem;
-  padding-top: 0.75rem;
+  gap: 0.35rem;
+  padding-top: 0.5rem;
   border-top: 1px dashed var(--border-subtle);
 }
 
 .tech-tag {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   background-color: var(--tag-bg);
   color: var(--tag-color);
   border: 1px solid var(--tag-border);
-  padding: 0.15rem 0.5rem;
+  padding: 0.12rem 0.45rem;
   border-radius: 3px;
+  white-space: nowrap;
 }
 
 /* ==========================================
-   Education & Background (Single Row)
+   Education & Background
    ========================================== */
 .edu-card {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: 6px;
-  padding: 1.15rem 1.35rem;
+  padding: 0.85rem 1.15rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .edu-main {
-  font-size: 0.95rem;
+  font-size: 0.925rem;
   font-weight: 600;
   color: var(--text-primary);
 }
 
 .edu-sub {
-  font-size: 0.85rem;
+  font-size: 0.825rem;
   color: var(--text-secondary);
-  margin-top: 0.15rem;
+  margin-top: 0.1rem;
 }
 
 .edu-period {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.775rem;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 /* ==========================================
@@ -607,43 +649,50 @@ a:hover {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: 6px;
-  padding: 1.5rem;
-  margin-top: 1rem;
+  padding: 1.15rem 1.35rem;
+  margin-top: 0.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .contact-text h3 {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .contact-text p {
-  font-size: 0.875rem;
+  font-size: 0.825rem;
   color: var(--text-secondary);
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
 }
 
 .contact-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.65rem;
+  flex-wrap: wrap;
 }
 
 .email-copy-bar {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   background-color: var(--bg-subtle);
   border: 1px solid var(--border-subtle);
   border-radius: 4px;
-  padding: 0.35rem 0.65rem;
+  padding: 0.3rem 0.55rem;
   font-family: var(--font-mono);
-  font-size: 0.825rem;
+  font-size: 0.8rem;
+}
+
+.email-copy-bar span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .btn-inline-copy {
@@ -652,8 +701,9 @@ a:hover {
   color: var(--accent);
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.8rem;
-  padding: 0.1rem 0.3rem;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.25rem;
+  flex-shrink: 0;
 }
 
 .btn-inline-copy:hover {
@@ -664,16 +714,16 @@ a:hover {
    Footer
    ========================================== */
 .footer {
-  margin-top: 3.5rem;
-  padding: 2rem 0;
+  margin-top: 2rem;
+  padding: 1.25rem 0;
   border-top: 1px solid var(--border-subtle);
-  font-size: 0.825rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .footer a {
@@ -689,20 +739,22 @@ a:hover {
    ========================================== */
 .toast-msg {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: 1.25rem;
+  right: 1.25rem;
   background-color: var(--text-primary);
   color: var(--bg-primary);
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 0.85rem;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.775rem;
   font-family: var(--font-mono);
   box-shadow: var(--shadow-md);
   opacity: 0;
-  transform: translateY(8px);
+  transform: translateY(6px);
   pointer-events: none;
   transition: all 0.2s ease;
   z-index: 2000;
+  max-width: 90vw;
+  text-align: center;
 }
 
 .toast-msg.active {
@@ -711,27 +763,178 @@ a:hover {
 }
 
 /* ==========================================
-   Responsive Breakpoints
+   Responsive Breakpoints & Layout Adaptations
    ========================================== */
-@media (max-width: 680px) {
+
+/* Tablets & Small Laptops (<= 768px) */
+@media (max-width: 768px) {
+  .quick-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile & Phablets (<= 640px) */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .header-nav {
+    height: 3.25rem;
+  }
+
+  html {
+    scroll-padding-top: 3.75rem;
+  }
+
   .hero {
-    padding-top: 4.75rem;
+    padding-top: 4.25rem;
   }
 
   .nav-menu {
+    position: fixed;
+    top: 3.25rem;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-subtle);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.75rem 1rem;
+    gap: 0.25rem;
+    box-shadow: var(--shadow-md);
     display: none;
   }
 
-  .quick-stats-row {
-    grid-template-columns: 1fr 1fr;
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 0.55rem 0.5rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+  }
+
+  .nav-menu a:hover {
+    background-color: var(--bg-subtle);
+  }
+
+  .mobile-toggle {
+    display: flex;
   }
 
   .candidate-title-row {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .candidate-badge {
+    margin-top: 0.25rem;
+  }
+
+  .candidate-contact-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .candidate-contact-bar .btn-contact {
+    width: 100%;
+  }
+
+  .candidate-contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    padding-top: 0.25rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-card {
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .email-copy-bar {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .contact-actions .btn-contact {
+    width: 100%;
+  }
+}
+
+/* Extra Small Mobile (<= 400px) */
+@media (max-width: 400px) {
+  .nav-brand {
+    font-size: 1.05rem;
+  }
+
+  .nav-contact-btn {
+    padding: 0.3rem 0.55rem;
+    font-size: 0.75rem;
+  }
+
+  .candidate-name {
+    font-size: 1.75rem;
+  }
+
+  .quick-stats-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+  }
+
+  .quick-stat-box {
+    padding: 0.5rem;
+  }
+
+  .stat-num {
+    font-size: 1rem;
+  }
+
+  .stat-desc {
+    font-size: 0.7rem;
+  }
+
+  .job-header {
+    flex-direction: column;
     align-items: flex-start;
+  }
+
+  .job-dates {
+    margin-top: 0.15rem;
+  }
+
+  .edu-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Very Narrow Devices (<= 330px) */
+@media (max-width: 330px) {
+  .quick-stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-brand {
+    font-size: 0.95rem;
   }
 }
