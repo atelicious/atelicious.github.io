@@ -1,140 +1,538 @@
 <!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elhy Tablazon — Software Developer</title>
+  <meta name="description" content="Personal portfolio of Elhy Tablazon. 5+ years of software development experience specializing in backend systems, microservices, telecom integrations, and data pipelines.">
+  <meta name="author" content="Elhy Tablazon">
 
-<!-- This is my solution to Build a Personal Portfolio Website in freeCodeCamp's Responsive Web Design.
-     You can view the original question and my codepen solution @ https://codepen.io/atelicious/full/ZEpWayd-->
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Elhy Tablazon — Software Developer">
+  <meta property="og:description" content="Backend systems, microservice architectures, and telecom integrations with 5+ years of production experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://atelicious.github.io/">
 
-<html>
-    <head>
-        <title>Atelicious' Personal Webpage</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    </head>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
 
-    <body>
-        <nav id='navbar'>
-            <a href="#welcome-section">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#certificates">Certificates</a>
-            <a href="#social">Social</a>
-          </nav>
-          
-          <header id='welcome-section'>
-            <h1>Hello!ヾ(⌐■_■)ノ♪</h1>
-            <p>My name is Elhy Tablazon</p>
-            <p>and I am a Programmer</p>
-            <p>currently working as a Data Analyst.</p>
-            <br/>
-            <br/>
-            <p>I am a passionate individual, always eager to learn </p>
-            <p>new things about pretty much everything.</p>
-            <br/>
-            <br/>
-            <p>I'm currently working on Python and its application in Data Analysis,</p>
-            <p>but I'm also interested in learning things in Web Development like HTML, CSS and JavaScript.</p>
-            
-          </header>
-          
-          <section class="projects" id='projects'>
-            <h2>Here are some of my projects</h2>
-               
-          <div class="projects-container">
-              <a href='https://codepen.io/atelicious/full/MWjwYbV' target='_blank' class="project-tile">
-                <img src="https://github.com/atelicious/projects-under-rwd-fcc/blob/main/Tribute%20Page/tp-thumbnail.png?raw=true" alt="tribute page">
-                <p>Tribute Page</p>
-                <form>
-                <button type="submit" formaction='https://codepen.io/atelicious/full/MWjwYbV' formtarget="_blank" class="btn2">View Demo</button>
-                <button type="submit" formaction='https://github.com/atelicious/projects-under-rwd-fcc/blob/main/Tribute%20Page' formtarget="_blank"class="btn2" >View Code</button>
-                </form>
-              </a>
+  <!-- ==========================================
+       Header & Navigation
+       ========================================== -->
+  <header class="header-nav">
+    <div class="container nav-inner">
+      <a href="#intro" class="nav-brand" aria-label="Elhy Tablazon">
+        <span>Elhy Tablazon</span>
+        <span class="role-stamp">Backend Dev</span>
+      </a>
 
-              <a href='https://codepen.io/atelicious/full/yLaexeJ' target='_blank' class="project-tile">
-                <img src="https://github.com/atelicious/projects-under-rwd-fcc/blob/main/Technical%20Documentation%20Page/tdp-thumbnail.png?raw=true" alt="tech documentation">
-                <p>Documentation Page</p>
-                <form>
-                <button type="submit" formaction='https://codepen.io/atelicious/full/yLaexeJ' formtarget="_blank" class="btn2">View Demo</button>
-                <button type="submit" formaction='https://github.com/atelicious/projects-under-rwd-fcc/blob/main/Technical%20Documentation%20Page' formtarget="_blank"class="btn2" >View Code</button>
-                </form>
-              </a>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Disciplines &amp; Stack</a>
+        <a href="#background">Background</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-              <a href='https://nbviewer.jupyter.org/github/atelicious/projects-under-dawp-fcc/blob/main/Sea%20level%20Predictor/Sea%20Level%20Predictor%20(FCC).ipynb' target='_blank' class="project-tile">
-                <img src="https://github.com/atelicious/projects-under-dawp-fcc/blob/main/Sea%20level%20Predictor/sea_level_plot.png?raw=true" alt="sea level predictor">
-                <p>Sea Level Predictor</p>
-                <form>
-                <button type="submit" formaction='https://nbviewer.jupyter.org/github/atelicious/projects-under-dawp-fcc/blob/main/Sea%20level%20Predictor/Sea%20Level%20Predictor%20(FCC).ipynb' formtarget="_blank" class="btn2">View Demo</button>
-                <button type="submit" formaction='https://github.com/atelicious/projects-under-dawp-fcc/blob/main/Sea%20level%20Predictor' formtarget="_blank"class="btn2" >View Code</button>
-                </form>
+      <div class="nav-controls">
+        <button class="theme-button" id="theme-toggle" type="button" aria-label="Toggle visual theme">
+          <!-- Populated by script.js -->
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
 
-              <a href='https://nbviewer.jupyter.org/github/atelicious/projects-under-dawp-fcc/blob/main/Medical%20Data%20Visualizer/Medical%20Data%20Visualizer%20(FCC).ipynb' target='_blank' class="project-tile">
-                <img src="https://github.com/atelicious/projects-under-dawp-fcc/blob/main/Medical%20Data%20Visualizer/heatmap.png?raw=true" alt="medical data analyzer">
-                <p>Medical Data Analyzer</p>
-                <form>
-                <button type="submit" formaction='https://nbviewer.jupyter.org/github/atelicious/projects-under-dawp-fcc/blob/main/Medical%20Data%20Visualizer/Medical%20Data%20Visualizer%20(FCC).ipynb' formtarget="_blank" class="btn2">View Demo</button>
-                <button type="submit" formaction='https://github.com/atelicious/projects-under-dawp-fcc/blob/main/Medical%20Data%20Visualizer' formtarget="_blank"class="btn2" >View Code</button>
-                </form>
-              </a>
+        <a href="./assets/Elhy_Tablazon_Resume.pdf" target="_blank" download="Elhy_Tablazon_Resume.pdf" class="resume-pill">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="12" y1="18" x2="12" y2="12"></line>
+            <polyline points="9 15 12 18 15 15"></polyline>
+          </svg>
+          Resume (PDF)
+        </a>
 
-              <a href='https://nbviewer.jupyter.org/github/atelicious/projects-under-dawp-fcc/blob/main/Page%20Time%20View%20Visualizer/Page%20View%20Time%20Series%20Visualizer%20%28FCC%29.ipynb' target='_blank' class="project-tile">
-                <img src="https://github.com/atelicious/projects-under-dawp-fcc/blob/main/Page%20Time%20View%20Visualizer/bar_plot.png?raw=true" alt="Page View Visualizer">
-                <p>Page View Visualizer</p>
-                <form>
-                <button type="submit" formaction='https://nbviewer.jupyter.org/github/atelicious/projects-under-dawp-fcc/blob/main/Page%20Time%20View%20Visualizer/Page%20View%20Time%20Series%20Visualizer%20%28FCC%29.ipynb' formtarget="_blank" class="btn2">View Demo</button>
-                <button type="submit" formaction='https://github.com/atelicious/projects-under-scwp-fcc/blob/main/Budget%20App' formtarget="_blank" class="btn2" >View Code</button>
-                </form>
-              </a>
-                   
-              <a href='https://nbviewer.jupyter.org/github/atelicious/projects-under-scwp-fcc/blob/main/Budget%20App/Budget%20App%20(FCC).ipynb' target='_blank' class="project-tile">
-                <img src="https://github.com/atelicious/projects-under-scwp-fcc/blob/main/Budget%20App/bp-thumbnail.png?raw=true" alt="Budget App">
-                <p>Budget App</p>
-                <form>
-                <button type="submit" formaction='https://nbviewer.jupyter.org/github/atelicious/projects-under-scwp-fcc/blob/main/Budget%20App/Budget%20App%20(FCC).ipynb' formtarget="_blank" class="btn2">View Demo</button>
-                <button type="submit" formaction=https://github.com/atelicious/projects-under-scwp-fcc/blob/main/Budget%20App' formtarget="_blank"class="btn2" >View Code</button>
-                </form>
-              </a> 
+        <button class="mobile-toggle" id="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         Hero / Introduction Section
+         ========================================== -->
+    <section class="hero" id="intro">
+      <div class="container">
+        <div class="hero-meta-row">
+          <div class="current-status">
+            <span class="status-indicator"></span>
+            Laguna, Philippines • Open to backend &amp; integrations roles
+          </div>
+        </div>
+
+        <h1 class="hero-name">Elhy Tablazon</h1>
+
+        <div class="hero-headline">
+          Building the quiet, resilient backend plumbing that keeps complex systems talking.
+        </div>
+
+        <p class="hero-story">
+          I am a software developer with <strong>over 5 years of experience</strong> in backend engineering, distributed integrations, and data processing. Day-to-day, I connect international mobile network operators and aggregators to microservice architectures—deciphering third-party API specs, handling high-volume transactions, and ensuring data arrives reliably without silent failures.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#experience" class="btn-editorial primary">
+            Explore Experience
+          </a>
+
+          <a href="./assets/Elhy_Tablazon_Resume.pdf" target="_blank" download="Elhy_Tablazon_Resume.pdf" class="btn-editorial secondary">
+            Download Resume
+          </a>
+
+          <div class="hero-social-list">
+            <a href="https://github.com/atelicious" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/elhy-tablazon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:elhytablazon07@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         Field Notes / Highlights
+         ========================================== -->
+    <section class="container">
+      <div class="field-notes">
+        <div class="notes-grid">
+          <div class="note-item accent-border">
+            <div class="note-figure">5+</div>
+            <div class="note-label">Years in Production</div>
+            <div class="note-context">Writing Python, architecting REST APIs, and maintaining live backend services.</div>
+          </div>
+
+          <div class="note-item">
+            <div class="note-figure">15+</div>
+            <div class="note-label">Carrier Integrations</div>
+            <div class="note-context">Connecting international mobile operators &amp; aggregators with microservice backends.</div>
+          </div>
+
+          <div class="note-item">
+            <div class="note-figure">10+</div>
+            <div class="note-label">Developers Mentored</div>
+            <div class="note-context">Chaired developer training committee; created onboarding paths and led code reviews.</div>
+          </div>
+
+          <div class="note-item">
+            <div class="note-figure">CE &rarr; SE</div>
+            <div class="note-label">Structural Thinking</div>
+            <div class="note-context">Civil engineering foundation applied to fault tolerance, load management, and data flow.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         About & Philosophy Section
+         ========================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Perspective</span>
+          <h2 class="section-heading">How I Approach Software</h2>
+          <p class="section-annotation">
+            A practical look at my day-to-day engineering mindset and why I care about clean integrations.
+          </p>
+        </div>
+
+        <div class="philosophy-grid">
+          <div class="philosophy-text">
+            <p>
+              A lot of software work happens in the unglamorous in-betweens: where two systems with completely different schemas, protocol versions, and latency characteristics have to exchange mission-critical data. That has been the core of my career.
+            </p>
+            <p>
+              At <strong>Filcan Global Envelope Strategies</strong>, I work at the intersection of international telecom operators and microservice ecosystems. I analyze partner requirements, clarify ambiguities directly with remote engineering teams, spot architectural bottlenecks early, and write clean, validated backend code that stays robust under high volume.
+            </p>
+            <p>
+              I believe great software engineering isn't just about writing code; it's about <strong>clarity</strong>. Clear technical plans, honest code reviews, and reproducible automated reporting ensure everyone on the team can move fast without breaking things.
+            </p>
+          </div>
+
+          <div class="callout-box">
+            <h4>Engineering Tenets</h4>
+            <p>A few practical principles I hold while designing and shipping systems:</p>
+            <div class="callout-principles">
+              <div class="principle-item">
+                <span class="principle-bullet">01</span>
+                <span>Assume external APIs will change, lag, or fail silently—build defensible validation and logging first.</span>
+              </div>
+              <div class="principle-item">
+                <span class="principle-bullet">02</span>
+                <span>Implementation plans save weeks of debugging; understand all affected services before touching staging.</span>
+              </div>
+              <div class="principle-item">
+                <span class="principle-bullet">03</span>
+                <span>Mentorship is an investment; a well-trained engineering team elevates the baseline quality of every pull request.</span>
+              </div>
             </div>
-          </section>
-               
-          <section class='button'>
-            <a class='btn' href="https://github.com/atelicious/" target='_blank'>View More Projects</a>
-          </section>
-                                                                                
-          <section class="projects" id='certificates'>
-            <h2>Certificates</h2>
-            <div class="certs-container">
-              <a href="https://freecodecamp.org/certification/atelicious/scientific-computing-with-python-v7" target='_blank' class="certs-tile">
-                <img src="https://github.com/atelicious/sample/blob/main/SCWP.png?raw=true" alt="scwp cert">
-                  <p>Scientific Computing with Python</p>
-                </img>
-              </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-              <a href="https://freecodecamp.org/certification/atelicious/data-analysis-with-python-v7" target='_blank' class="certs-tile">
-                <img src="https://github.com/atelicious/sample/blob/main/DAWP.png?raw=true" alt="scwp cert">
-                  <p>Data Analysis with Python</p>
-                </img>
-              </a>                                                           
-                                                                                
-               <a href="https://freecodecamp.org/certification/atelicious/responsive-web-design" target='_blank' class="certs-tile">
-                  <img src="https://github.com/atelicious/sample/blob/main/RWD.png?raw=true" alt="scwp cert">
-                    <p>Responsive Web Design Certification</p>
-                </img>
-              </a>
-           </div>
-          </section>                                                                          
-                                                                                
-          <section class="bg-social" id='social'>
-            <h2>Social Media</h2>
-            <p>You can find me on</p>
-            <ul class='social-links'>
-              <li><a href="https://www.linkedin.com/in/elhy-tablazon" target='_blank' class="fab fa-linkedin" id='profile-link'></a></li>
-              <li><a href="https://github.com/atelicious" target='_blank' class="fab fa-github" id='profile-link'></a></li>
-              <li><a href="https://www.freecodecamp.org/atelicious" target='_blank' class="fab fa-free-code-camp" id='profile-link'></a></li>
-              <li><a href="https://codepen.io/atelicious" target='_blank' class="fab fa-codepen" id='profile-link'></a></li>
-              <li><a href="https://repl.it/@atelicious" target='_blank' class="fab fa-replyd" id='profile-link'></a></li>
-              <li><a href="mailto:elhytablazon@yahoo.com.ph" target='_blank' class="fas fa-at" id='profile-link'></a></li>
+    <!-- ==========================================
+         Work Experience Section
+         ========================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Track Record</span>
+          <h2 class="section-heading">Work Experience</h2>
+          <p class="section-annotation">
+            Five years across enterprise telecom integrations, web backend services, and automated data operations.
+          </p>
+        </div>
+
+        <div class="experience-log">
+          <!-- Job 1: Filcan Global -->
+          <article class="log-entry">
+            <div class="log-header">
+              <div>
+                <h3 class="role-title">Intermediate Software Developer</h3>
+                <div class="company-name">Filcan Global Envelope Strategies Inc.</div>
+              </div>
+              <div class="log-meta">
+                <span class="tenure-stamp">Dec 2022 – Present</span>
+                <span class="location-stamp">Philippines • Global Telecom Market</span>
+              </div>
+            </div>
+
+            <ul class="log-body">
+              <li>
+                <strong>Ecosystem Integrations:</strong> Built, tested, and actively maintain <strong>15+ partner integrations</strong> connecting global mobile network operators and payment aggregators with an internal microservice architecture.
+              </li>
+              <li>
+                <strong>Partner Collaboration &amp; Planning:</strong> Analyzed partner technical specifications, clarified requirements with external engineering POCs, prepared technical implementation plans, and flagged feasibility risks early.
+              </li>
+              <li>
+                <strong>Reliability &amp; Evolution:</strong> Validated backend changes across test, staging, and production environments. Proactively diagnosed payload anomalies, handled partner API version updates, and fixed production issues.
+              </li>
+              <li>
+                <strong>Code Review &amp; Quality:</strong> Conducted thorough peer code reviews across backend and integration codebases to uphold security and architectural standards.
+              </li>
+              <li>
+                <strong>Reporting Automation:</strong> Authored custom Python automation scripts to parse, process, and reconcile sales and subscription metrics across international accounts.
+              </li>
+              <li>
+                <strong>Engineering Leadership:</strong> Chaired the developer training committee, spearheading technical onboarding curricula and personally mentoring 10+ newly hired software engineers.
+              </li>
             </ul>
-          </section>
-          
-          <footer>
-            © 2020 Created by @atelicious 
-          </footer>
-    </body>
-</html>     
+
+            <div class="log-stack">
+              <span class="stack-label">Stack:</span>
+              <span class="stack-item">Python</span>
+              <span class="stack-item">Microservices</span>
+              <span class="stack-item">REST APIs</span>
+              <span class="stack-item">System Integrations</span>
+              <span class="stack-item">Jenkins</span>
+              <span class="stack-item">GitLab</span>
+              <span class="stack-item">Azure</span>
+              <span class="stack-item">Postman / Bruno</span>
+            </div>
+          </article>
+
+          <!-- Job 2: Adipster Tech -->
+          <article class="log-entry">
+            <div class="log-header">
+              <div>
+                <h3 class="role-title">Software Developer</h3>
+                <div class="company-name">Adipster Tech Limited</div>
+              </div>
+              <div class="log-meta">
+                <span class="tenure-stamp">Jan 2021 – Jun 2021</span>
+                <span class="location-stamp">Hong Kong SAR (Remote)</span>
+              </div>
+            </div>
+
+            <ul class="log-body">
+              <li>
+                <strong>Backend Engineering:</strong> Engineered backend web applications and API endpoints using Python, Flask, and Django for multi-tenant web platforms.
+              </li>
+              <li>
+                <strong>Full-Stack Problem Solving:</strong> Diagnosed and resolved backend logic errors, database queries, and frontend UI defects.
+              </li>
+              <li>
+                <strong>Interface Fixes:</strong> Implemented responsive layout improvements and interactive components using vanilla JavaScript and Bootstrap.
+              </li>
+              <li>
+                <strong>Cloud &amp; Versioning:</strong> Managed application environments, continuous integration, and version control using Microsoft Azure and GitHub.
+              </li>
+            </ul>
+
+            <div class="log-stack">
+              <span class="stack-label">Stack:</span>
+              <span class="stack-item">Python</span>
+              <span class="stack-item">Flask</span>
+              <span class="stack-item">Django</span>
+              <span class="stack-item">JavaScript</span>
+              <span class="stack-item">Bootstrap</span>
+              <span class="stack-item">MS Azure</span>
+              <span class="stack-item">GitHub</span>
+            </div>
+          </article>
+
+          <!-- Job 3: Top Market Marketing -->
+          <article class="log-entry">
+            <div class="log-header">
+              <div>
+                <h3 class="role-title">Data Analyst</h3>
+                <div class="company-name">Top Market Marketing</div>
+              </div>
+              <div class="log-meta">
+                <span class="tenure-stamp">Jun 2019 – Dec 2020</span>
+                <span class="location-stamp">Philippines</span>
+              </div>
+            </div>
+
+            <ul class="log-body">
+              <li>
+                <strong>Data Processing &amp; Reporting:</strong> Analyzed multi-source sales, logistics, and operational datasets to generate strategic insights for management.
+              </li>
+              <li>
+                <strong>Automated Analytics:</strong> Programmed Python and Pandas scripts alongside advanced spreadsheet models to automate repetitive ETL, aggregation, and validation tasks.
+              </li>
+              <li>
+                <strong>Discrepancy Auditing:</strong> Investigated data variances, conducted root-cause analyses on transactional errors, and supported financial ledger balancing in QuickBooks.
+              </li>
+            </ul>
+
+            <div class="log-stack">
+              <span class="stack-label">Stack:</span>
+              <span class="stack-item">Python</span>
+              <span class="stack-item">Pandas</span>
+              <span class="stack-item">Excel Modeling</span>
+              <span class="stack-item">QuickBooks</span>
+              <span class="stack-item">ETL Automation</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         Disciplines & Stack Section
+         ========================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Toolbox</span>
+          <h2 class="section-heading">Disciplines &amp; Technical Stack</h2>
+          <p class="section-annotation">
+            The programming languages, frameworks, and infrastructure tools I reach for in production.
+          </p>
+        </div>
+
+        <div class="skills-layout">
+          <!-- Card 1: Core Backend -->
+          <div class="skill-discipline-card">
+            <div class="discipline-header">
+              <span class="discipline-category">Architecture &amp; Design</span>
+              <h3 class="discipline-title">Backend &amp; Integrations</h3>
+            </div>
+            <div class="discipline-tags">
+              <span class="pill-tag">RESTful APIs</span>
+              <span class="pill-tag">Microservices</span>
+              <span class="pill-tag">Partner Integrations</span>
+              <span class="pill-tag">Implementation Plans</span>
+              <span class="pill-tag">Code Review Standards</span>
+              <span class="pill-tag">API Troubleshooting</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Languages -->
+          <div class="skill-discipline-card">
+            <div class="discipline-header">
+              <span class="discipline-category">Languages</span>
+              <h3 class="discipline-title">Programming Languages</h3>
+            </div>
+            <div class="discipline-tags">
+              <span class="pill-tag">Python (Primary)</span>
+              <span class="pill-tag">Java</span>
+              <span class="pill-tag">TypeScript</span>
+              <span class="pill-tag">JavaScript</span>
+              <span class="pill-tag">Perl</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Frameworks -->
+          <div class="skill-discipline-card">
+            <div class="discipline-header">
+              <span class="discipline-category">Web &amp; Services</span>
+              <h3 class="discipline-title">Frameworks &amp; Runtimes</h3>
+            </div>
+            <div class="discipline-tags">
+              <span class="pill-tag">FastAPI</span>
+              <span class="pill-tag">Django</span>
+              <span class="pill-tag">Flask</span>
+              <span class="pill-tag">Spring Boot</span>
+              <span class="pill-tag">Dancer2</span>
+              <span class="pill-tag">PSGI</span>
+              <span class="pill-tag">Bootstrap</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Data & Automation -->
+          <div class="skill-discipline-card">
+            <div class="discipline-header">
+              <span class="discipline-category">Data Operations</span>
+              <h3 class="discipline-title">Data &amp; Automation</h3>
+            </div>
+            <div class="discipline-tags">
+              <span class="pill-tag">MongoDB</span>
+              <span class="pill-tag">Pandas</span>
+              <span class="pill-tag">Reporting Scripts</span>
+              <span class="pill-tag">Excel Analytics</span>
+              <span class="pill-tag">Data Reconciliation</span>
+              <span class="pill-tag">QuickBooks</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Cloud & Tools -->
+          <div class="skill-discipline-card">
+            <div class="discipline-header">
+              <span class="discipline-category">DevOps &amp; Collaboration</span>
+              <h3 class="discipline-title">Cloud &amp; Development Tools</h3>
+            </div>
+            <div class="discipline-tags">
+              <span class="pill-tag">Microsoft Azure</span>
+              <span class="pill-tag">Git / GitHub / GitLab</span>
+              <span class="pill-tag">Jenkins CI/CD</span>
+              <span class="pill-tag">Postman &amp; Bruno</span>
+              <span class="pill-tag">Jira &amp; Confluence</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         Background & Education
+         ========================================== -->
+    <section class="section" id="background">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Roots</span>
+          <h2 class="section-heading">Foundations &amp; Education</h2>
+          <p class="section-annotation">
+            Why civil engineering became an advantage in software architecture.
+          </p>
+        </div>
+
+        <div class="education-wrapper">
+          <div class="edu-title-row">
+            <div>
+              <h3 class="edu-degree-title">Bachelor of Science in Civil Engineering</h3>
+              <div class="edu-institution">University of Baguio • Baguio City, Philippines</div>
+            </div>
+            <div class="edu-years">2014 – 2019</div>
+          </div>
+
+          <div class="edu-narrative">
+            <p>
+              People often ask why I transitioned from Civil Engineering to Software Development. In practice, the thinking is identical: you are analyzing forces, designing for structural integrity, budgeting for failure modes, and building pathways where things must not break when under stress.
+            </p>
+            <p style="margin-top: 0.75rem;">
+              That rigorous mathematical and structural training shaped how I write code—anticipating network stress, planning fail-safes for third-party integrations, and valuing clear, verifiable design over speculative complexity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         Contact & Conversation
+         ========================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-block">
+          <div class="contact-layout">
+            <div class="contact-invitation">
+              <h3>Let's talk about building solid systems.</h3>
+              <p>
+                Whether you're looking for a backend engineer, planning a partner integration pipeline, or just want to discuss software craftsmanship—my inbox is always open.
+              </p>
+              <div class="location-footnote">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                Based in Laguna, Philippines • Available for Remote &amp; Hybrid roles
+              </div>
+            </div>
+
+            <div class="contact-actions-box">
+              <div class="email-interactive-bar">
+                <span class="email-address-text">elhytablazon07@gmail.com</span>
+                <button class="btn-copy-action" id="copy-email-btn" type="button" aria-label="Copy email address">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  Copy
+                </button>
+              </div>
+
+              <div class="direct-links-row">
+                <a href="mailto:elhytablazon07@gmail.com" class="btn-mail-direct">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  Send an Email
+                </a>
+
+                <a href="https://www.linkedin.com/in/elhy-tablazon" target="_blank" rel="noopener noreferrer" class="link-icon-text">
+                  LinkedIn &rarr;
+                </a>
+
+                <a href="https://github.com/atelicious" target="_blank" rel="noopener noreferrer" class="link-icon-text">
+                  GitHub &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       Site Footer
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        &copy; 2026 Elhy Tablazon. Crafted with clean HTML, CSS &amp; vanilla JS.
+      </div>
+      <div class="footer-links-list">
+        <a href="#intro">Back to top &uarr;</a>
+        <a href="https://github.com/atelicious" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/elhy-tablazon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="./assets/Elhy_Tablazon_Resume.pdf" target="_blank">Resume PDF</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast for Email Copy Notification -->
+  <div class="toast-notice" id="toast" role="status" aria-live="polite">
+    Copied email to clipboard
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
