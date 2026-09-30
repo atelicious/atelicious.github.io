@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elhy Tablazon — Software Developer</title>
-  <meta name="description" content="Personal portfolio of Elhy Tablazon. 5+ years of software development experience specializing in backend systems, microservices, telecom integrations, and data pipelines.">
+  <meta name="description" content="Portfolio of Elhy Tablazon — Software Developer with 5+ years of experience in backend development, systems integrations, microservices, and data analysis.">
   <meta name="author" content="Elhy Tablazon">
 
   <!-- OpenGraph Metadata -->
   <meta property="og:title" content="Elhy Tablazon — Software Developer">
-  <meta property="og:description" content="Backend systems, microservice architectures, and telecom integrations with 5+ years of production experience.">
+  <meta property="og:description" content="5+ years in backend engineering, microservices, telecom integrations, and Python data pipelines.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://atelicious.github.io/">
 
@@ -18,519 +18,335 @@
 <body>
 
   <!-- ==========================================
-       Header & Navigation
+       Sticky Navigation Bar
        ========================================== -->
   <header class="header-nav">
     <div class="container nav-inner">
-      <a href="#intro" class="nav-brand" aria-label="Elhy Tablazon">
-        <span>Elhy Tablazon</span>
-        <span class="role-stamp">Backend Dev</span>
+      <a href="#overview" class="nav-brand" aria-label="Elhy Tablazon">
+        Elhy Tablazon
       </a>
 
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about">About</a>
+      <nav class="nav-menu">
         <a href="#experience">Experience</a>
-        <a href="#skills">Disciplines &amp; Stack</a>
-        <a href="#background">Background</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
 
       <div class="nav-controls">
-        <button class="theme-button" id="theme-toggle" type="button" aria-label="Toggle visual theme">
-          <!-- Populated by script.js -->
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button class="theme-btn" id="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
 
-        <a href="./assets/Elhy_Tablazon_Resume.pdf" target="_blank" download="Elhy_Tablazon_Resume.pdf" class="resume-pill">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="12" y1="18" x2="12" y2="12"></line>
-            <polyline points="9 15 12 18 15 15"></polyline>
+        <a href="./assets/Elhy_Tablazon_Resume.pdf" target="_blank" download="Elhy_Tablazon_Resume.pdf" class="resume-top-btn">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
           Resume (PDF)
         </a>
-
-        <button class="mobile-toggle" id="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
       </div>
     </div>
   </header>
 
-  <main>
+  <main class="container">
     <!-- ==========================================
-         Hero / Introduction Section
+         Hero: 10-Second Candidate Overview
          ========================================== -->
-    <section class="hero" id="intro">
-      <div class="container">
-        <div class="hero-meta-row">
-          <div class="current-status">
-            <span class="status-indicator"></span>
-            Laguna, Philippines • Open to backend &amp; integrations roles
+    <section class="hero" id="overview">
+      <div class="candidate-header">
+        <div class="candidate-title-row">
+          <div>
+            <h1 class="candidate-name">Elhy Tablazon</h1>
+            <div class="candidate-role">Software Developer — Backend &amp; Systems Integration</div>
+          </div>
+          <div class="candidate-badge">
+            <span class="status-dot"></span>
+            Laguna, Philippines • Open to Roles
           </div>
         </div>
 
-        <h1 class="hero-name">Elhy Tablazon</h1>
-
-        <div class="hero-headline">
-          Building the quiet, resilient backend plumbing that keeps complex systems talking.
-        </div>
-
-        <p class="hero-story">
-          I am a software developer with <strong>over 5 years of experience</strong> in backend engineering, distributed integrations, and data processing. Day-to-day, I connect international mobile network operators and aggregators to microservice architectures—deciphering third-party API specs, handling high-volume transactions, and ensuring data arrives reliably without silent failures.
+        <p class="candidate-pitch">
+          Software Developer with <strong>5+ years of experience</strong> in backend engineering, distributed microservices, REST APIs, and automated data pipelines. Proven background building and maintaining <strong>15+ international carrier integrations</strong> connecting mobile network operators and billing aggregators across global markets.
         </p>
 
-        <div class="hero-actions">
-          <a href="#experience" class="btn-editorial primary">
-            Explore Experience
+        <div class="candidate-contact-bar">
+          <a href="./assets/Elhy_Tablazon_Resume.pdf" target="_blank" download="Elhy_Tablazon_Resume.pdf" class="btn-contact primary">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="12" y1="18" x2="12" y2="12"></line>
+              <polyline points="9 15 12 18 15 15"></polyline>
+            </svg>
+            Download Resume (PDF)
           </a>
 
-          <a href="./assets/Elhy_Tablazon_Resume.pdf" target="_blank" download="Elhy_Tablazon_Resume.pdf" class="btn-editorial secondary">
-            Download Resume
+          <button class="btn-contact outline" id="copy-email-top-btn" type="button">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            Copy Email
+          </button>
+
+          <a href="mailto:elhytablazon07@gmail.com" class="link-muted">
+            elhytablazon07@gmail.com
           </a>
 
-          <div class="hero-social-list">
-            <a href="https://github.com/atelicious" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/elhy-tablazon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="mailto:elhytablazon07@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/elhy-tablazon" target="_blank" rel="noopener noreferrer" class="link-muted">
+            LinkedIn &rarr;
+          </a>
+
+          <a href="https://github.com/atelicious" target="_blank" rel="noopener noreferrer" class="link-muted">
+            GitHub &rarr;
+          </a>
+        </div>
+
+        <div class="quick-stats-row">
+          <div class="quick-stat-box">
+            <div class="stat-num">5+ Years</div>
+            <div class="stat-desc">Production Backend &amp; Data</div>
+          </div>
+          <div class="quick-stat-box">
+            <div class="stat-num">15+ Integrations</div>
+            <div class="stat-desc">Mobile Operators &amp; Aggregators</div>
+          </div>
+          <div class="quick-stat-box">
+            <div class="stat-num">10+ Engineers</div>
+            <div class="stat-desc">Mentored &amp; Onboarded</div>
+          </div>
+          <div class="quick-stat-box">
+            <div class="stat-num">Python / Microservices</div>
+            <div class="stat-desc">Core Production Stack</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==========================================
-         Field Notes / Highlights
-         ========================================== -->
-    <section class="container">
-      <div class="field-notes">
-        <div class="notes-grid">
-          <div class="note-item accent-border">
-            <div class="note-figure">5+</div>
-            <div class="note-label">Years in Production</div>
-            <div class="note-context">Writing Python, architecting REST APIs, and maintaining live backend services.</div>
-          </div>
-
-          <div class="note-item">
-            <div class="note-figure">15+</div>
-            <div class="note-label">Carrier Integrations</div>
-            <div class="note-context">Connecting international mobile operators &amp; aggregators with microservice backends.</div>
-          </div>
-
-          <div class="note-item">
-            <div class="note-figure">10+</div>
-            <div class="note-label">Developers Mentored</div>
-            <div class="note-context">Chaired developer training committee; created onboarding paths and led code reviews.</div>
-          </div>
-
-          <div class="note-item">
-            <div class="note-figure">CE &rarr; SE</div>
-            <div class="note-label">Structural Thinking</div>
-            <div class="note-context">Civil engineering foundation applied to fault tolerance, load management, and data flow.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================
-         About & Philosophy Section
-         ========================================== -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-eyebrow">Perspective</span>
-          <h2 class="section-heading">How I Approach Software</h2>
-          <p class="section-annotation">
-            A practical look at my day-to-day engineering mindset and why I care about clean integrations.
-          </p>
-        </div>
-
-        <div class="philosophy-grid">
-          <div class="philosophy-text">
-            <p>
-              A lot of software work happens in the unglamorous in-betweens: where two systems with completely different schemas, protocol versions, and latency characteristics have to exchange mission-critical data. That has been the core of my career.
-            </p>
-            <p>
-              At <strong>Filcan Global Envelope Strategies</strong>, I work at the intersection of international telecom operators and microservice ecosystems. I analyze partner requirements, clarify ambiguities directly with remote engineering teams, spot architectural bottlenecks early, and write clean, validated backend code that stays robust under high volume.
-            </p>
-            <p>
-              I believe great software engineering isn't just about writing code; it's about <strong>clarity</strong>. Clear technical plans, honest code reviews, and reproducible automated reporting ensure everyone on the team can move fast without breaking things.
-            </p>
-          </div>
-
-          <div class="callout-box">
-            <h4>Engineering Tenets</h4>
-            <p>A few practical principles I hold while designing and shipping systems:</p>
-            <div class="callout-principles">
-              <div class="principle-item">
-                <span class="principle-bullet">01</span>
-                <span>Assume external APIs will change, lag, or fail silently—build defensible validation and logging first.</span>
-              </div>
-              <div class="principle-item">
-                <span class="principle-bullet">02</span>
-                <span>Implementation plans save weeks of debugging; understand all affected services before touching staging.</span>
-              </div>
-              <div class="principle-item">
-                <span class="principle-bullet">03</span>
-                <span>Mentorship is an investment; a well-trained engineering team elevates the baseline quality of every pull request.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================
-         Work Experience Section
+         Work Experience (First for Recruiters)
          ========================================== -->
     <section class="section" id="experience">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-eyebrow">Track Record</span>
-          <h2 class="section-heading">Work Experience</h2>
-          <p class="section-annotation">
-            Five years across enterprise telecom integrations, web backend services, and automated data operations.
-          </p>
-        </div>
+      <h2 class="section-title">
+        Work Experience
+        <span class="section-hint">5+ Years Total</span>
+      </h2>
 
-        <div class="experience-log">
-          <!-- Job 1: Filcan Global -->
-          <article class="log-entry">
-            <div class="log-header">
-              <div>
-                <h3 class="role-title">Intermediate Software Developer</h3>
-                <div class="company-name">Filcan Global Envelope Strategies Inc.</div>
-              </div>
-              <div class="log-meta">
-                <span class="tenure-stamp">Dec 2022 – Present</span>
-                <span class="location-stamp">Philippines • Global Telecom Market</span>
-              </div>
+      <div class="experience-list">
+        <!-- Job 1 -->
+        <article class="job-card">
+          <div class="job-header">
+            <div>
+              <h3 class="job-role">Intermediate Software Developer</h3>
+              <div class="job-company">Filcan Global Envelope Strategies Inc.</div>
             </div>
+            <span class="job-dates">Dec 2022 – Present • Philippines</span>
+          </div>
 
-            <ul class="log-body">
-              <li>
-                <strong>Ecosystem Integrations:</strong> Built, tested, and actively maintain <strong>15+ partner integrations</strong> connecting global mobile network operators and payment aggregators with an internal microservice architecture.
-              </li>
-              <li>
-                <strong>Partner Collaboration &amp; Planning:</strong> Analyzed partner technical specifications, clarified requirements with external engineering POCs, prepared technical implementation plans, and flagged feasibility risks early.
-              </li>
-              <li>
-                <strong>Reliability &amp; Evolution:</strong> Validated backend changes across test, staging, and production environments. Proactively diagnosed payload anomalies, handled partner API version updates, and fixed production issues.
-              </li>
-              <li>
-                <strong>Code Review &amp; Quality:</strong> Conducted thorough peer code reviews across backend and integration codebases to uphold security and architectural standards.
-              </li>
-              <li>
-                <strong>Reporting Automation:</strong> Authored custom Python automation scripts to parse, process, and reconcile sales and subscription metrics across international accounts.
-              </li>
-              <li>
-                <strong>Engineering Leadership:</strong> Chaired the developer training committee, spearheading technical onboarding curricula and personally mentoring 10+ newly hired software engineers.
-              </li>
-            </ul>
+          <ul class="job-bullets">
+            <li>
+              Developed and actively support <strong>15+ partner integrations</strong> connecting international mobile network operators and billing aggregators with a high-throughput microservice ecosystem.
+            </li>
+            <li>
+              Analyzed partner technical specifications, clarified requirements with external POCs, identified affected services, and prepared technical implementation plans.
+            </li>
+            <li>
+              Validated and deployed backend updates across test, staging, and production environments; investigated bugs and adapted services as partner APIs evolved.
+            </li>
+            <li>
+              Conducted regular peer code reviews to ensure reliability, security, and integration standards across the team.
+            </li>
+            <li>
+              Automated sales and subscription reporting by building custom Python data processing scripts.
+            </li>
+            <li>
+              Chaired the Developer Training Committee, leading onboarding and technical training for <strong>10+ software developers</strong>.
+            </li>
+          </ul>
 
-            <div class="log-stack">
-              <span class="stack-label">Stack:</span>
-              <span class="stack-item">Python</span>
-              <span class="stack-item">Microservices</span>
-              <span class="stack-item">REST APIs</span>
-              <span class="stack-item">System Integrations</span>
-              <span class="stack-item">Jenkins</span>
-              <span class="stack-item">GitLab</span>
-              <span class="stack-item">Azure</span>
-              <span class="stack-item">Postman / Bruno</span>
+          <div class="job-tech-row">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Microservices</span>
+            <span class="tech-tag">REST APIs</span>
+            <span class="tech-tag">System Integrations</span>
+            <span class="tech-tag">Jenkins</span>
+            <span class="tech-tag">GitLab</span>
+            <span class="tech-tag">MS Azure</span>
+            <span class="tech-tag">Postman / Bruno</span>
+          </div>
+        </article>
+
+        <!-- Job 2 -->
+        <article class="job-card">
+          <div class="job-header">
+            <div>
+              <h3 class="job-role">Software Developer</h3>
+              <div class="job-company">Adipster Tech Limited</div>
             </div>
-          </article>
+            <span class="job-dates">Jan 2021 – Jun 2021 • Hong Kong SAR (Remote)</span>
+          </div>
 
-          <!-- Job 2: Adipster Tech -->
-          <article class="log-entry">
-            <div class="log-header">
-              <div>
-                <h3 class="role-title">Software Developer</h3>
-                <div class="company-name">Adipster Tech Limited</div>
-              </div>
-              <div class="log-meta">
-                <span class="tenure-stamp">Jan 2021 – Jun 2021</span>
-                <span class="location-stamp">Hong Kong SAR (Remote)</span>
-              </div>
+          <ul class="job-bullets">
+            <li>
+              Engineered backend web applications and REST APIs using <strong>Python, Flask, and Django</strong> across multiple client projects.
+            </li>
+            <li>
+              Implemented core features and resolved backend logic, database queries, and frontend UI issues using JavaScript and Bootstrap.
+            </li>
+            <li>
+              Collaborated on CI/CD and deployment workflows using Microsoft Azure and Git/GitHub.
+            </li>
+          </ul>
+
+          <div class="job-tech-row">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Bootstrap</span>
+            <span class="tech-tag">Azure</span>
+            <span class="tech-tag">GitHub</span>
+          </div>
+        </article>
+
+        <!-- Job 3 -->
+        <article class="job-card">
+          <div class="job-header">
+            <div>
+              <h3 class="job-role">Data Analyst</h3>
+              <div class="job-company">Top Market Marketing</div>
             </div>
+            <span class="job-dates">Jun 2019 – Dec 2020 • Philippines</span>
+          </div>
 
-            <ul class="log-body">
-              <li>
-                <strong>Backend Engineering:</strong> Engineered backend web applications and API endpoints using Python, Flask, and Django for multi-tenant web platforms.
-              </li>
-              <li>
-                <strong>Full-Stack Problem Solving:</strong> Diagnosed and resolved backend logic errors, database queries, and frontend UI defects.
-              </li>
-              <li>
-                <strong>Interface Fixes:</strong> Implemented responsive layout improvements and interactive components using vanilla JavaScript and Bootstrap.
-              </li>
-              <li>
-                <strong>Cloud &amp; Versioning:</strong> Managed application environments, continuous integration, and version control using Microsoft Azure and GitHub.
-              </li>
-            </ul>
+          <ul class="job-bullets">
+            <li>
+              Analyzed multi-channel sales, finance, and logistics data for executive operational reporting.
+            </li>
+            <li>
+              Automated data processing, cleaning, and reporting pipelines using <strong>Python, Pandas, and Excel</strong>.
+            </li>
+            <li>
+              Investigated financial and transactional data discrepancies and supported reconciliations using QuickBooks.
+            </li>
+          </ul>
 
-            <div class="log-stack">
-              <span class="stack-label">Stack:</span>
-              <span class="stack-item">Python</span>
-              <span class="stack-item">Flask</span>
-              <span class="stack-item">Django</span>
-              <span class="stack-item">JavaScript</span>
-              <span class="stack-item">Bootstrap</span>
-              <span class="stack-item">MS Azure</span>
-              <span class="stack-item">GitHub</span>
-            </div>
-          </article>
-
-          <!-- Job 3: Top Market Marketing -->
-          <article class="log-entry">
-            <div class="log-header">
-              <div>
-                <h3 class="role-title">Data Analyst</h3>
-                <div class="company-name">Top Market Marketing</div>
-              </div>
-              <div class="log-meta">
-                <span class="tenure-stamp">Jun 2019 – Dec 2020</span>
-                <span class="location-stamp">Philippines</span>
-              </div>
-            </div>
-
-            <ul class="log-body">
-              <li>
-                <strong>Data Processing &amp; Reporting:</strong> Analyzed multi-source sales, logistics, and operational datasets to generate strategic insights for management.
-              </li>
-              <li>
-                <strong>Automated Analytics:</strong> Programmed Python and Pandas scripts alongside advanced spreadsheet models to automate repetitive ETL, aggregation, and validation tasks.
-              </li>
-              <li>
-                <strong>Discrepancy Auditing:</strong> Investigated data variances, conducted root-cause analyses on transactional errors, and supported financial ledger balancing in QuickBooks.
-              </li>
-            </ul>
-
-            <div class="log-stack">
-              <span class="stack-label">Stack:</span>
-              <span class="stack-item">Python</span>
-              <span class="stack-item">Pandas</span>
-              <span class="stack-item">Excel Modeling</span>
-              <span class="stack-item">QuickBooks</span>
-              <span class="stack-item">ETL Automation</span>
-            </div>
-          </article>
-        </div>
+          <div class="job-tech-row">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">Excel Analytics</span>
+            <span class="tech-tag">QuickBooks</span>
+            <span class="tech-tag">Reporting Automation</span>
+          </div>
+        </article>
       </div>
     </section>
 
     <!-- ==========================================
-         Disciplines & Stack Section
+         Technical Skills Matrix
          ========================================== -->
     <section class="section" id="skills">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-eyebrow">Toolbox</span>
-          <h2 class="section-heading">Disciplines &amp; Technical Stack</h2>
-          <p class="section-annotation">
-            The programming languages, frameworks, and infrastructure tools I reach for in production.
-          </p>
+      <h2 class="section-title">
+        Technical Skills
+        <span class="section-hint">Production Competencies</span>
+      </h2>
+
+      <div class="skills-grid">
+        <div class="skill-box">
+          <div class="skill-category">Languages</div>
+          <div class="skill-items">
+            <strong>Python</strong> (Primary), Java, TypeScript, JavaScript, Perl
+          </div>
         </div>
 
-        <div class="skills-layout">
-          <!-- Card 1: Core Backend -->
-          <div class="skill-discipline-card">
-            <div class="discipline-header">
-              <span class="discipline-category">Architecture &amp; Design</span>
-              <h3 class="discipline-title">Backend &amp; Integrations</h3>
-            </div>
-            <div class="discipline-tags">
-              <span class="pill-tag">RESTful APIs</span>
-              <span class="pill-tag">Microservices</span>
-              <span class="pill-tag">Partner Integrations</span>
-              <span class="pill-tag">Implementation Plans</span>
-              <span class="pill-tag">Code Review Standards</span>
-              <span class="pill-tag">API Troubleshooting</span>
-            </div>
+        <div class="skill-box">
+          <div class="skill-category">Backend &amp; Architecture</div>
+          <div class="skill-items">
+            Microservices, REST APIs, System Integrations, Technical Implementation Plans, Code Reviews, API Troubleshooting
           </div>
+        </div>
 
-          <!-- Card 2: Languages -->
-          <div class="skill-discipline-card">
-            <div class="discipline-header">
-              <span class="discipline-category">Languages</span>
-              <h3 class="discipline-title">Programming Languages</h3>
-            </div>
-            <div class="discipline-tags">
-              <span class="pill-tag">Python (Primary)</span>
-              <span class="pill-tag">Java</span>
-              <span class="pill-tag">TypeScript</span>
-              <span class="pill-tag">JavaScript</span>
-              <span class="pill-tag">Perl</span>
-            </div>
+        <div class="skill-box">
+          <div class="skill-category">Frameworks &amp; Web</div>
+          <div class="skill-items">
+            FastAPI, Django, Flask, Spring Boot, Dancer2, PSGI, Bootstrap
           </div>
+        </div>
 
-          <!-- Card 3: Frameworks -->
-          <div class="skill-discipline-card">
-            <div class="discipline-header">
-              <span class="discipline-category">Web &amp; Services</span>
-              <h3 class="discipline-title">Frameworks &amp; Runtimes</h3>
-            </div>
-            <div class="discipline-tags">
-              <span class="pill-tag">FastAPI</span>
-              <span class="pill-tag">Django</span>
-              <span class="pill-tag">Flask</span>
-              <span class="pill-tag">Spring Boot</span>
-              <span class="pill-tag">Dancer2</span>
-              <span class="pill-tag">PSGI</span>
-              <span class="pill-tag">Bootstrap</span>
-            </div>
+        <div class="skill-box">
+          <div class="skill-category">Data &amp; Automation</div>
+          <div class="skill-items">
+            MongoDB, Pandas, Excel Analytics, Reporting Automation, QuickBooks Reconciliations
           </div>
+        </div>
 
-          <!-- Card 4: Data & Automation -->
-          <div class="skill-discipline-card">
-            <div class="discipline-header">
-              <span class="discipline-category">Data Operations</span>
-              <h3 class="discipline-title">Data &amp; Automation</h3>
-            </div>
-            <div class="discipline-tags">
-              <span class="pill-tag">MongoDB</span>
-              <span class="pill-tag">Pandas</span>
-              <span class="pill-tag">Reporting Scripts</span>
-              <span class="pill-tag">Excel Analytics</span>
-              <span class="pill-tag">Data Reconciliation</span>
-              <span class="pill-tag">QuickBooks</span>
-            </div>
-          </div>
-
-          <!-- Card 5: Cloud & Tools -->
-          <div class="skill-discipline-card">
-            <div class="discipline-header">
-              <span class="discipline-category">DevOps &amp; Collaboration</span>
-              <h3 class="discipline-title">Cloud &amp; Development Tools</h3>
-            </div>
-            <div class="discipline-tags">
-              <span class="pill-tag">Microsoft Azure</span>
-              <span class="pill-tag">Git / GitHub / GitLab</span>
-              <span class="pill-tag">Jenkins CI/CD</span>
-              <span class="pill-tag">Postman &amp; Bruno</span>
-              <span class="pill-tag">Jira &amp; Confluence</span>
-            </div>
+        <div class="skill-box">
+          <div class="skill-category">Cloud &amp; DevOps Tools</div>
+          <div class="skill-items">
+            Microsoft Azure, Jenkins CI/CD, Git, GitLab, GitHub, Postman, Bruno, Jira, Confluence
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==========================================
-         Background & Education
+         Education
          ========================================== -->
-    <section class="section" id="background">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-eyebrow">Roots</span>
-          <h2 class="section-heading">Foundations &amp; Education</h2>
-          <p class="section-annotation">
-            Why civil engineering became an advantage in software architecture.
-          </p>
-        </div>
+    <section class="section" id="education">
+      <h2 class="section-title">
+        Education
+        <span class="section-hint">Degree</span>
+      </h2>
 
-        <div class="education-wrapper">
-          <div class="edu-title-row">
-            <div>
-              <h3 class="edu-degree-title">Bachelor of Science in Civil Engineering</h3>
-              <div class="edu-institution">University of Baguio • Baguio City, Philippines</div>
-            </div>
-            <div class="edu-years">2014 – 2019</div>
-          </div>
-
-          <div class="edu-narrative">
-            <p>
-              People often ask why I transitioned from Civil Engineering to Software Development. In practice, the thinking is identical: you are analyzing forces, designing for structural integrity, budgeting for failure modes, and building pathways where things must not break when under stress.
-            </p>
-            <p style="margin-top: 0.75rem;">
-              That rigorous mathematical and structural training shaped how I write code—anticipating network stress, planning fail-safes for third-party integrations, and valuing clear, verifiable design over speculative complexity.
-            </p>
-          </div>
+      <div class="edu-card">
+        <div>
+          <div class="edu-main">Bachelor of Science in Civil Engineering</div>
+          <div class="edu-sub">University of Baguio • Baguio City, Philippines</div>
         </div>
+        <div class="edu-period">2014 – 2019</div>
       </div>
     </section>
 
     <!-- ==========================================
-         Contact & Conversation
+         Direct Contact Banner
          ========================================== -->
     <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-block">
-          <div class="contact-layout">
-            <div class="contact-invitation">
-              <h3>Let's talk about building solid systems.</h3>
-              <p>
-                Whether you're looking for a backend engineer, planning a partner integration pipeline, or just want to discuss software craftsmanship—my inbox is always open.
-              </p>
-              <div class="location-footnote">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
-                Based in Laguna, Philippines • Available for Remote &amp; Hybrid roles
-              </div>
-            </div>
+      <div class="contact-card">
+        <div class="contact-text">
+          <h3>Interested in discussing a backend or integration role?</h3>
+          <p>Feel free to reach out directly via email or connect on LinkedIn.</p>
+        </div>
 
-            <div class="contact-actions-box">
-              <div class="email-interactive-bar">
-                <span class="email-address-text">elhytablazon07@gmail.com</span>
-                <button class="btn-copy-action" id="copy-email-btn" type="button" aria-label="Copy email address">
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                  </svg>
-                  Copy
-                </button>
-              </div>
-
-              <div class="direct-links-row">
-                <a href="mailto:elhytablazon07@gmail.com" class="btn-mail-direct">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
-                  Send an Email
-                </a>
-
-                <a href="https://www.linkedin.com/in/elhy-tablazon" target="_blank" rel="noopener noreferrer" class="link-icon-text">
-                  LinkedIn &rarr;
-                </a>
-
-                <a href="https://github.com/atelicious" target="_blank" rel="noopener noreferrer" class="link-icon-text">
-                  GitHub &rarr;
-                </a>
-              </div>
-            </div>
+        <div class="contact-actions">
+          <div class="email-copy-bar">
+            <span>elhytablazon07@gmail.com</span>
+            <button class="btn-inline-copy" id="copy-email-btn" type="button">Copy</button>
           </div>
+
+          <a href="mailto:elhytablazon07@gmail.com" class="btn-contact primary">
+            Send Email
+          </a>
         </div>
       </div>
     </section>
+
+    <!-- ==========================================
+         Footer
+         ========================================== -->
+    <footer class="footer">
+      <div>&copy; 2026 Elhy Tablazon. Built for fast review on GitHub Pages.</div>
+      <div>
+        <a href="#overview">Back to top &uarr;</a>
+      </div>
+    </footer>
   </main>
 
-  <!-- ==========================================
-       Site Footer
-       ========================================== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        &copy; 2026 Elhy Tablazon. Crafted with clean HTML, CSS &amp; vanilla JS.
-      </div>
-      <div class="footer-links-list">
-        <a href="#intro">Back to top &uarr;</a>
-        <a href="https://github.com/atelicious" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/elhy-tablazon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="./assets/Elhy_Tablazon_Resume.pdf" target="_blank">Resume PDF</a>
-      </div>
-    </div>
-  </footer>
-
   <!-- Toast for Email Copy Notification -->
-  <div class="toast-notice" id="toast" role="status" aria-live="polite">
-    Copied email to clipboard
+  <div class="toast-msg" id="toast" role="status" aria-live="polite">
+    Copied elhytablazon07@gmail.com to clipboard
   </div>
 
   <script src="./script.js"></script>
