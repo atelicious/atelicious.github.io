@@ -173,7 +173,7 @@ a:hover {
   color: var(--accent);
 }
 
-.resume-top-btn {
+.nav-contact-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -181,13 +181,14 @@ a:hover {
   font-weight: 600;
   padding: 0.4rem 0.85rem;
   border-radius: 5px;
-  background-color: var(--accent);
-  color: #FFFFFF !important;
+  background-color: var(--text-primary);
+  color: var(--bg-primary) !important;
   transition: background-color 0.15s ease;
 }
 
-.resume-top-btn:hover {
-  background-color: var(--accent-hover);
+.nav-contact-btn:hover {
+  background-color: var(--accent);
+  color: #FFFFFF !important;
 }
 
 /* ==========================================================================
@@ -281,13 +282,12 @@ a:hover {
 }
 
 .btn-contact.primary {
-  background-color: var(--text-primary);
-  color: var(--bg-primary);
+  background-color: var(--accent);
+  color: #FFFFFF !important;
 }
 
 .btn-contact.primary:hover {
-  background-color: var(--accent);
-  color: #FFFFFF;
+  background-color: var(--accent-hover);
 }
 
 .btn-contact.outline {
@@ -374,7 +374,43 @@ a:hover {
 }
 
 /* ==========================================
-   Work Experience: High Impact, Zero Fluff
+   Skills Matrix: Instant Visual Parsing
+   ========================================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.skill-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 1rem 1.15rem;
+}
+
+.skill-category {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.skill-items {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.skill-items strong {
+  color: var(--accent);
+}
+
+/* ==========================================
+   Work Experience: High Impact with Progressive Disclosure
    ========================================== */
 .experience-list {
   display: flex;
@@ -425,7 +461,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .job-bullets li {
@@ -449,6 +485,69 @@ a:hover {
   font-weight: 600;
 }
 
+/* Collapsible Progressive Disclosure */
+.job-details {
+  margin-top: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.job-details-toggle {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 500;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0;
+  list-style: none;
+}
+
+.job-details-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.job-details-toggle:hover {
+  text-decoration: underline;
+}
+
+.job-details[open] .toggle-icon {
+  transform: rotate(90deg);
+}
+
+.toggle-icon {
+  display: inline-block;
+  transition: transform 0.15s ease;
+  font-size: 0.75rem;
+}
+
+.job-expanded-content {
+  margin-top: 0.65rem;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.job-expanded-content li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  list-style: none;
+}
+
+.job-expanded-content li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
 .job-tech-row {
   display: flex;
   flex-wrap: wrap;
@@ -466,42 +565,6 @@ a:hover {
   border: 1px solid var(--tag-border);
   padding: 0.15rem 0.5rem;
   border-radius: 3px;
-}
-
-/* ==========================================
-   Skills Matrix: Instant Visual Parsing
-   ========================================== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-}
-
-.skill-box {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  padding: 1rem 1.15rem;
-}
-
-.skill-category {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-}
-
-.skill-items {
-  font-size: 0.9rem;
-  color: var(--text-primary);
-  line-height: 1.5;
-}
-
-.skill-items strong {
-  color: var(--accent);
 }
 
 /* ==========================================
